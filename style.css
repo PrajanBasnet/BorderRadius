@@ -1,0 +1,10 @@
+body{
+    background-color: antiquewhite;
+}
+.rounded{
+    border-radius: 25px;
+    background-color:red ;
+    height: 200px;
+    width: 150px;
+    padding: 60px;
+}
