@@ -1,11 +1,35 @@
 const rounded = document.querySelector(".rounded");
-const myArea = document.querySelector("#myArea");
-const txtArea = document.querySelector(".txtArea");
+const container = document.querySelector(".container");
 
-console.log(myArea.value);
+const txtAreaR = document.querySelector(".txtAreaR");
+const txtAreaL = document.querySelector(".txtAreaL");
+const txtAreaBL = document.querySelector(".txtAreaBL");
+const txtAreaBR = document.querySelector(".txtAreaBR");
+
+const myArea = document.querySelector("#myArea");
+const left = document.querySelector("#left");
+const right = document.querySelector("#right");
+const Bleft = document.querySelector("#bottomleft");
+const Bright = document.querySelector("#bottomright");
+
+
+
 console.log("working");
 
-myArea.addEventListener("keyup",(event) =>{
-    rounded.style.borderRadius = `${myArea.value}px`;
-    txtArea.textContent = "Border Radius is " + myArea.value;
+container.addEventListener("keyup",(event) =>{
+
+    // rounded.style.borderRadius = `${right.value}px ${right.value}px `;
+    rounded.style.borderTopLeftRadius = `${left.value}px`;
+    rounded.style.borderTopRightRadius = `${right.value}px`;
+    rounded.style.borderBottomLeftRadius = `${Bleft.value}px`;
+    rounded.style.borderBottomRightRadius = `${Bright.value}px`;
+
+
+    
+    console.log(right.value);
+    txtAreaL.textContent = "Border Radius Left :" + left.value;
+    txtAreaR.textContent = "Border Radius right  :" + right.value;
+    txtAreaBL.textContent = "Border Radius Bottom-Left :" + Bleft.value;
+    txtAreaBR.textContent = "Border Radius Bottom-Right :" + Bright.value;
+
 })
